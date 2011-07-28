@@ -21,9 +21,9 @@ for(i in 1:samples){
   
   x.beta<-beta.multi(x.sample)	
 
-  results.n[i,1]<-x.beta$beta.SIM
-  results.n[i,2]<-x.beta$beta.NES
-  results.n[i,3]<-x.beta$beta.SOR
+  results.n[i,1]<-x.beta$beta.sim
+  results.n[i,2]<-x.beta$beta.nes
+  results.n[i,3]<-x.beta$beta.sor
 }
 result<-list(sampled.values=results.n,mean.values=mean(results.n), sd.values=sd(results.n))
 return(result)

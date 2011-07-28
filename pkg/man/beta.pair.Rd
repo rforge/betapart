@@ -15,7 +15,7 @@ beta.pair(x)
 }
 
 \arguments{
-\item{x}{data frame, where rows are sites and columns are species}
+\item{x}{data frame, where rows are sites and columns are species. Alternatively {\code{x} can be a {\code{betapart} object derived from the {\code{betapart.core} function}
 }
 
 \value{

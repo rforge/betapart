@@ -2,6 +2,22 @@
 
 beta.multi <- function(x){
 
+	if (inherits(x, "betapart")){
+		
+		 maxbibj <- sum(x$max.not.shared[lower.tri(x$max.not.shared)])
+             minbibj <- sum(x$min.not.shared[lower.tri(x$min.not.shared)])
+
+                        # indices
+                        beta.sim <- minbibj / (minbibj + x$a)
+                        beta.nes <- (x$a / (minbibj + x$a)) * ((maxbibj - minbibj) / ((2 * x$a) + maxbibj + minbibj))
+                        beta.sor <- (minbibj + maxbibj) / (minbibj + maxbibj + (2 * x$a))
+
+            		multi <- list(beta.sim=beta.sim, beta.nes=beta.nes,beta.sor=beta.sor)
+
+        	return(multi)
+	}
+
+	else{
 		x<-as.matrix(x)
                 shared <- x %*% t(x)
                 not.shared <-  abs(sweep(shared, 2, diag(shared)))
@@ -22,16 +38,28 @@ beta.multi <- function(x){
 
 
                         # indices
-                        beta.SIM <- minbibj / (minbibj + a)
-                        beta.NES <- (a / (minbibj + a)) * ((maxbibj - minbibj) / ((2 * a) + maxbibj + minbibj))
-                        beta.SOR <- (minbibj + maxbibj) / (minbibj + maxbibj + (2 * a))
+                        beta.sim <- minbibj / (minbibj + a)
+                        beta.nes <- (a / (minbibj + a)) * ((maxbibj - minbibj) / ((2 * a) + maxbibj + minbibj))
+                        beta.sor <- (minbibj + maxbibj) / (minbibj + maxbibj + (2 * a))
 
-            		multi <- list(beta.SIM=beta.SIM, beta.NES=beta.NES,beta.SOR=beta.SOR)
+            		multi <- list(beta.sim=beta.sim, beta.nes=beta.nes,beta.sor=beta.sor)
         	return(multi)
 	} 
+}
 
 ## pairwise site similarity values
 beta.pair <- function(x){
+	if (inherits(x, "betapart")){
+		
+ 		beta.sim <- x$min.not.shared / (x$min.not.shared + x$shared)
+            beta.nes <- ((x$max.not.shared - x$min.not.shared) / ((2 * x$shared) + x$sum.not.shared)) * (x$shared / (x$min.not.shared + x$shared))
+            beta.sor <- x$sum.not.shared / (2 * x$shared + x$sum.not.shared)
+                
+            pairwise <- list(beta.sim=as.dist(beta.sim), beta.nes=as.dist(beta.nes),beta.sor=as.dist(beta.sor))
+                
+            return(pairwise)
+	}
+	else{
 
 		x<-as.matrix(x)
                 shared <- x %*% t(x)
@@ -51,3 +79,4 @@ beta.pair <- function(x){
                 return(pairwise)
         
         } 
+}
