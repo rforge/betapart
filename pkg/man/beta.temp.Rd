@@ -1,70 +1,41 @@
 \name{beta.temp}
 \alias{beta.temp}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
-%%  ~~function to do ... ~~
+Temporal change in community composition
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Computes the dissimilarity for each locality between time 1 and time 2, considering 
+the turnover (beta.sim) and nestedness components (beta.nes) of temporal change, 
+and the sum of both values (beta.sor)
 }
 \usage{
 beta.temp(x, y)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
-}
-  \item{y}{
-%%     ~~Describe \code{y} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+\item{x}{data frame for time 1, where rows are sites and columns are species}
+\item{y}{data frame for time 2, where rows are sites and columns are species. {\code{x} and {\code{y} must contain exactly the same sites and species}
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
+\value{
+The function returns a data frame where rows are sites and columns are dissimilarity values: beta.sim, beta.nes, and beta.sor
+
+}
+
+\references{
+Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
+}
+
+\author{
+Andrés Baselga and David Orme
+}
+
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{beta.multi}}, \code{\link{beta.pair}}, \code{\link{beta.sample}}, \code{\link{beta.core}}, 
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (x, y) 
-{
-    x <- as.matrix(x)
-    y <- as.matrix(y)
-    ai <- apply(x & y, 1, sum)
-    bi <- apply(x & !y, 1, sum)
-    ci <- apply(!x & y, 1, sum)
-    beta.sor <- (bi + ci)/(2 * ai + bi + ci)
-    beta.sim <- pmin(bi, ci)/(ai + pmin(bi, ci))
-    beta.nes <- beta.sor - beta.sim
-    result <- data.frame(beta.sim, beta.nes, beta.sor)
-    return(result)
-  }
+data(ceram.s)
+ceram.t<-beta.temp(ceram.s, ceram.s)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

@@ -1,6 +1,5 @@
 \name{beta.sample}
 \alias{beta.sample}
-\alias{betapart}
 
 \title{
 Resampling multiple-site dissimilarity for n sites
@@ -38,7 +37,7 @@ Andrés Baselga and David Orme
 
 
 \seealso{
-\code{\link{beta.multi}}, \code{\link{beta.sample}}
+\code{\link{beta.multi}}, \code{\link{beta.sample}}, \code{\link{beta.temp}}
 }
 \examples{
 # Read the data for Northern and Southern European cerambycids

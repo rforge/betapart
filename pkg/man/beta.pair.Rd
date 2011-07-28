@@ -1,6 +1,5 @@
 \name{beta.pair}
 \alias{beta.pair}
-\alias{betapart}
 
 \title{
 Pair-wise dissimilarities
@@ -35,7 +34,7 @@ Andrés Baselga and David Orme
 
 
 \seealso{
-\code{\link{beta.multi}}, \code{\link{beta.sample}}
+\code{\link{beta.multi}}, \code{\link{beta.sample}}, \code{\link{beta.core}}, \code{\link{beta.temp}}
 }
 \examples{
 data(ceram.s)

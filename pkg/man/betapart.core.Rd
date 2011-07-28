@@ -1,71 +1,48 @@
 \name{betapart.core}
 \alias{betapart.core}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
-%%  ~~function to do ... ~~
+Core calculations of betapart
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Computes the basic quantities needed for computing the multiple-site beta diversity measures
+and pairwise dissimilarity matrices.
 }
 \usage{
-betapart.core(x)
-}
-%- maybe also 'usage' for other objects documented here.
-\arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+beta.core(x)
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
+\arguments{
+\item{x}{data frame, where rows are sites and columns are species. 
+}
+
+\value{
+The function returns an object of class {\code{betapart} with the following elements:
+\item{sumSi} the sum of the species richness values of all sites}
+\item{St} the total richness in the dataset}
+\item{a}{ the multiple-site analog of the shared species term}
+\item{shared}{ a matrix containing the number of species shared between pairs of sites}
+\item{not.shared}{ a matrix containing the number of species not shared between pairs of sites: b, c}
+\item{sum.not.shared}{ a matrix containing the total number of species not shared between pairs of sites: b+c}
+\item{max.not.shared}{ a matrix containing the total maximum number of species not shared between pairs of sites: max(b,c)}
+\item{min.not.shared}{ a matrix containing the total minimum number of species not shared between pairs of sites: min(b,c)}
+}
+
+\references{
+Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
+}
+
+\author{
+Andrés Baselga and David Orme
+}
+
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{beta.multi}}, \code{\link{beta.pair}}, \code{\link{beta.sample}}, \code{\link{beta.temp}},
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (x) 
-{
-    x <- as.matrix(x)
-    shared <- x \%*\% t(x)
-    not.shared <- abs(sweep(shared, 2, diag(shared)))
-    sumSi <- sum(diag(shared))
-    St <- sum(colSums(x) > 0)
-    a <- sumSi - St
-    sum.not.shared <- not.shared + t(not.shared)
-    max.not.shared <- pmax(not.shared, t(not.shared))
-    min.not.shared <- pmin(not.shared, t(not.shared))
-    computations <- list(sumSi = sumSi, St = St, a = a, shared = shared, 
-        not.shared = not.shared, sum.not.shared = sum.not.shared, 
-        max.not.shared = max.not.shared, min.not.shared = min.not.shared)
-    class(computations) <- "betapart"
-    return(computations)
-  }
+data(ceram.s)
+ceram.s.core<-beta.core(ceram.s)
+ceram.dist<-beta.pair(ceram.core.s)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
