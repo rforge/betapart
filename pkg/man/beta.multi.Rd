@@ -33,7 +33,7 @@ Andrés Baselga and David Orme
 
 
 \seealso{
-\code{\link{beta.pair}}, \code{\link{beta.sample}}, \code{\link{beta.core}}, \code{\link{beta.temp}}
+\code{\link{beta.pair}}, \code{\link{beta.sample}}, \code{\link{betapart.core}}, \code{\link{beta.temp}}
 }
 \examples{
 data(ceram.s)
