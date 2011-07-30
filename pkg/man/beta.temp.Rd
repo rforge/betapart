@@ -14,13 +14,14 @@ beta.temp(x, y)
 }
 
 \arguments{
-\item{x}{data frame for time 1, where rows are sites and columns are species}
-\item{y}{data frame for time 2, where rows are sites and columns are species. {\code{x} and {\code{y} must contain exactly the same sites and species}
+\item{x}{ data frame for time 1, where rows are sites and columns are species}
+\item{y}{ data frame for time 2, where rows are sites and columns are species. 
+\code{x} and \code{y} must contain exactly the same sites and species}
 }
 
 \value{
-The function returns a data frame where rows are sites and columns are dissimilarity values: beta.sim, beta.nes, and beta.sor
-
+The function returns a data frame where rows are sites and columns are pairwise dissimilarity 
+values between cell composition in time 1 and time 2: beta.sim, beta.nes, and beta.sor
 }
 
 \references{

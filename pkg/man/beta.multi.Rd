@@ -14,13 +14,13 @@ beta.multi(x)
 }
 
 \arguments{
-\item{x}{data frame, where rows are sites and columns are species. Alternatively {\code{x} can be a {\code{betapart} object derived from the {\code{betapart.core} function}
+\item{x}{ data frame, where rows are sites and columns are species. Alternatively \code{x} can be a \code{betapart} object derived from the \code{betapart.core} function}
 }
 \value{
 The function returns a list with the three multiple site dissimilarity values:
-\item{beta.SIM}{value of the overall turnover component, measured as Simpson dissimilarity}
-\item{beta.NES}{value of the overall nestedness component, measured as Nestedness-resultant dissimilarity}
-\item{beta.SOR}{value of the overall beta diversity measured, as Sorensen dissimilarity}
+\item{beta.SIM}{ value of the overall turnover component, measured as Simpson dissimilarity}
+\item{beta.NES}{ value of the overall nestedness component, measured as Nestedness-resultant dissimilarity}
+\item{beta.SOR}{ value of the overall beta diversity measured, as Sorensen dissimilarity}
 }
 
 \references{

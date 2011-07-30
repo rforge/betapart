@@ -14,14 +14,14 @@ beta.pair(x)
 }
 
 \arguments{
-\item{x}{data frame, where rows are sites and columns are species. Alternatively {\code{x} can be a {\code{betapart} object derived from the {\code{betapart.core} function}
+\item{x}{ data frame, where rows are sites and columns are species. Alternatively \code{x} can be a \code{betapart} object derived from the \code{betapart.core} function}
 }
 
 \value{
 The function returns a list with three dissimilarity matrices:
-\item{beta.sim}{\code{dist} object, dissimilarity matrix accounting for spatial turnover, measured as Simpson pair-wise dissimilarity}
-\item{beta.nes}{\code{dist} object, dissimilarity matrix accounting for nestedness-resultant dissimilarity, measured as nestedness-resultant pair-wise dissimilarity}
-\item{beta.sim}{\code{dist} object, dissimilarity matrix accounting for beta diversity, measured as Sorensen pair-wise dissimilarity}
+\item{beta.sim}{ \code{dist} object, dissimilarity matrix accounting for spatial turnover, measured as Simpson pair-wise dissimilarity}
+\item{beta.nes}{ \code{dist} object, dissimilarity matrix accounting for nestedness-resultant dissimilarity, measured as nestedness-resultant pair-wise dissimilarity}
+\item{beta.sim}{ \code{dist} object, dissimilarity matrix accounting for beta diversity, measured as Sorensen pair-wise dissimilarity}
 }
 
 \references{
