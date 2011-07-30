@@ -17,7 +17,7 @@ beta.core(x)
 }
 
 \value{
-The function returns an object of class {\code{betapart} with the following elements:
+The function returns an object of class \code{betapart} with the following elements:
 \item{sumSi}{ the sum of the species richness values of all sites}
 \item{St}{ the total richness in the dataset}
 \item{a}{ the multiple-site analog of the shared species term}
