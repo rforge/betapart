@@ -3,8 +3,8 @@ Type: Package
 Title: Partitioning beta diversity into turnover and nestedness components
 Version: 1.0
 Date: 2011-01-20
-Author: Andrés Baselga and David Orme
-Maintainer: Andrés Baselga <andres.baselga@usc.es>
+Author: Andres Baselga and David Orme
+Maintainer: Andres Baselga <andres.baselga@usc.es>
 Description: betapart allows computing pair-wise dissimilarities (distance matrices) and multiple-site dissimilarities and to separate the turnover and nestedness components of beta diversity as described in Baselga (2010).
 License: GPL
 
