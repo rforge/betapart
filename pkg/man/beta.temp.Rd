@@ -28,7 +28,7 @@ beta.sim, beta.sne, and beta.sor. For \code{index.family="jaccard"} the indices 
 \references{
 Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
 
-Baselga, A. 2011. Exploring and explaining pattern in presence-absence data: response to Podani and Schmera. Oikos, in press
+Baselga, A. 2011. Exploring and explaining pattern in presence-absence data: response to Podani and Schmera. Oikos, under review
 }
 
 \author{

@@ -31,7 +31,7 @@ The function returns an object of class \code{betapart} with the following eleme
 \references{
 Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
 
-Baselga, A. 2011. Exploring and explaining pattern in presence-absence data: response to Podani and Schmera. Oikos, in press
+Baselga, A. 2011. Exploring and explaining pattern in presence-absence data: response to Podani and Schmera. Oikos, under review
 }
 
 \author{
