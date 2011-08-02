@@ -1,7 +1,6 @@
 \name{ceram.s}
      \docType{data}
      \alias{ceram.s}
-     \alias{betapart}
      \title{Cerambycidae from Southern European Countries}
      \description{
      The ceram.s data frame has 15 rows and 634 columns. Columns are presence/absence values of 634 species. The variable names are formed from the scientific names. The case names are standard country abbreviations, excepting SS (Serbia) and CBH (Croatia and Bosnia-Herzegovina).

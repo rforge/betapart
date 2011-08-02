@@ -30,6 +30,8 @@ The function returns an object of class \code{betapart} with the following eleme
 
 \references{
 Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
+
+Baselga, A. 2011. Exploring and explaining pattern in presence-absence data: response to Podani and Schmera. Oikos, in press
 }
 
 \author{
@@ -42,7 +44,11 @@ Andrés Baselga and David Orme
 }
 \examples{
 data(ceram.s)
-ceram.s.core<-beta.core(ceram.s)
-ceram.dist<-beta.pair(ceram.core.s)
+ceram.core.s<-betapart.core(ceram.s)
+ceram.dist.jac<-beta.pair(ceram.core.s, family="jac")
+ceram.dist.sor<-beta.pair(ceram.core.s, family="sor")
+ceram.multi.jac<-beta.multi(ceram.core.s, family="jac")
+ceram.multi.sor<-beta.multi(ceram.core.s, family="sor")
+
 }
 
