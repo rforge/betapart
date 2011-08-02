@@ -1,6 +1,6 @@
 Package: betapart
 Type: Package
-Title: Partitioning beta diversity into turnover and nestedness components
+Title: Partitioning beta diversity into its turnover and nestedness components
 Version: 1.0
 Date: 2011-01-20
 Author: Andres Baselga and David Orme
