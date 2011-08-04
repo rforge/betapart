@@ -9,7 +9,7 @@ Computes the basic quantities needed for computing the multiple-site beta divers
 and pairwise dissimilarity matrices.
 }
 \usage{
-beta.core(x)
+betapart.core(x)
 }
 
 \arguments{
