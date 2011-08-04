@@ -15,8 +15,8 @@ beta.sample(x, index.family="sorensen", sites=10, samples=100)
 \arguments{
 \item{x}{ data frame, where rows are sites and columns are species}
 \item{index.family}{ family of dissimilarity indices, partial match of \code{"sorensen"} or \code{"jaccard"}.}
-\item{sites}{ number of sites for which multiple-site dissimilarities will be computed}
-\item{samples}{ number of repetitions}
+\item{sites}{ number of sites for which multiple-site dissimilarities will be computed. If not specified, default is all sites.}
+\item{samples}{ number of repetitions. If not specified, default is 1.}
 }
 
 
