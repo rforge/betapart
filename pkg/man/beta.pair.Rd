@@ -36,7 +36,8 @@ For \code{index.family="jaccard"} the three matrices are:
 \references{
 Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
 
-Baselga, A. 2011. Exploring and explaining pattern in presence-absence data: response to Podani and Schmera. Oikos, under review
+Baselga, A. 2011. Separating the contributions of species replacement and species richness differences to beta diversity. 
+Global Ecology and Biogeography, under review
 }
 
 \author{
