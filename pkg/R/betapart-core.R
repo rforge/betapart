@@ -1,5 +1,8 @@
 betapart.core <- function(x){
 	x<-as.matrix(x)
+  
+	if(any(x>1))
+    	stop("The table contains values >1: data should be presence/absence.",call.=TRUE);
 
 	shared <- x %*% t(x)
       not.shared <-  abs(sweep(shared, 2, diag(shared)))

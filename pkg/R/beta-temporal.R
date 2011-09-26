@@ -1,7 +1,15 @@
 beta.temp <- function(x, y, index.family="index.family"){
 
 	x<-as.matrix(x)
+
+		if(any(x>1))
+    		stop("The first table contains values >1: data should be presence/absence.",call.=TRUE);
+
 	y<-as.matrix(y)
+
+		if(any(y>1))
+    		stop("The second table contains values >1: data should be presence/absence.",call.=TRUE);
+
 
 	ai<-apply(x&y, 1, sum)
 	bi<-apply(x&!y, 1, sum)

@@ -1,4 +1,8 @@
 beta.sample<-function(x, index.family="index.family", sites=nrow(x), samples=1){
+		
+	if(any(x>1))
+    	stop("The table contains values >1: data should be presence/absence.",call.=TRUE);
+
 	
 	pb <- txtProgressBar(min = 0, max = samples, style = 3)
 
