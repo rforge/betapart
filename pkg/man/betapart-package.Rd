@@ -30,8 +30,8 @@ Maintainer: Andrés Baselga <andres.baselga@usc.es>
 \references{
 Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
 
-Baselga, A. 2011. Separating the contributions of species replacement and species richness differences to beta diversity. 
-Global Ecology and Biogeography, under review
+Baselga, A. 2012. The relationship between species replacement, dissimilarity derived from nestedness and nestedness. 
+Global Ecology and Biogeography, in press
 }
 
 \examples{
