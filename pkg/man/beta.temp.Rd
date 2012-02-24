@@ -42,6 +42,6 @@ Andrés Baselga and David Orme
 \code{\link{beta.multi}}, \code{\link{beta.pair}}, \code{\link{beta.sample}}, \code{\link{betapart.core}}, 
 }
 \examples{
-data(ceram.s)
-ceram.t<-beta.temp(ceram.s, ceram.s, index.family="sor")
+data(bbsData)
+bbs.t <- beta.temp(bbs1980, bbs2000, index.family="sor")
 }
