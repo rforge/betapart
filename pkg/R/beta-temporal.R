@@ -1,39 +1,38 @@
-beta.temp <- function(x, y, index.family="index.family"){
+beta.temp <- function(x, y, index.family="sorensen"){
 
-	x<-as.matrix(x)
+	# test for a valid index
+	index.family <- match.arg(index.family, c('jaccard','sorensen'))
 
-		if(any(x>1))
-    		stop("The first table contains values >1: data should be presence/absence.",call.=TRUE);
+	# test for pre-existing betapart objects - validates data in x if not
+	if (! inherits(x, "betapart")){	
+		x <- betapart.core(x)
+	}
 
-	y<-as.matrix(y)
+	# test for pre-existing betapart objects - validates data in x if not
+	if (! inherits(y, "betapart")){	
+		y <- betapart.core(y)
+	}
 
-		if(any(y>1))
-    		stop("The second table contains values >1: data should be presence/absence.",call.=TRUE);
+	# check x and y match
+	if(! identical(dim(x$data), dim(y$data)))
+		stop('The two data matrices do not have the same dimensions.')
 
+	# get differences between groups
+	ai<-apply(x$data &  y$data, 1, sum)
+	bi<-apply(x$data & ! y$data, 1, sum)
+	ci<-apply(! x$data & y$data, 1, sum)
 
-	ai<-apply(x&y, 1, sum)
-	bi<-apply(x&!y, 1, sum)
-	ci<-apply(!x&y, 1, sum)
+	switch(index.family, 
+		sorensen = {
+			beta.sor<- (bi+ci) / (2*ai+bi+ci)
+			beta.sim<- pmin(bi,ci)/(ai+pmin(bi,ci))
+			beta.sne<- beta.sor - beta.sim
+			result<-data.frame(beta.sim, beta.sne, beta.sor)},
+		jaccard  = {
+			beta.jac<- (bi+ci) / (ai+bi+ci)
+			beta.jtu<- 2*pmin(bi,ci)/(ai+(2*pmin(bi,ci)))
+			beta.jne<- beta.jac - beta.jtu
+			result<-data.frame(beta.jtu, beta.jne, beta.jac)})
 
-	if (pmatch(index.family, "sorensen", nomatch = 0)){
-		beta.sor<- (bi+ci) / (2*ai+bi+ci)
-		beta.sim<- pmin(bi,ci)/(ai+pmin(bi,ci))
-		beta.sne<- beta.sor - beta.sim
-
-	result<-data.frame(beta.sim, beta.sne, beta.sor)
 	return(result)
-	}
-
-	if (pmatch(index.family, "jaccard", nomatch = 0)){
-		beta.jac<- (bi+ci) / (ai+bi+ci)
-		beta.jtu<- 2*pmin(bi,ci)/(ai+(2*pmin(bi,ci)))
-		beta.jne<- beta.jac - beta.jtu
-
-	result<-data.frame(beta.jtu, beta.jne, beta.jac)
-	return(result)
-	}
-
-	else{
-	stop("invalid dissimilarity index family")
-	}
 }
