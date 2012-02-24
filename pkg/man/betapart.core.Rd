@@ -1,5 +1,6 @@
 \name{betapart.core}
 \alias{betapart.core}
+\encoding{utf8}
 
 \title{
 Core calculations of betapart
@@ -36,7 +37,7 @@ Global Ecology and Biogeography, in press
 }
 
 \author{
-Andrés Baselga and David Orme
+AndrÃ©s Baselga and David Orme
 }
 
 

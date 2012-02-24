@@ -1,5 +1,6 @@
 \name{beta.multi}
 \alias{beta.multi}
+\encoding{utf8}
 
 \title{
 Multiple-site dissimilarities
@@ -41,7 +42,7 @@ Global Ecology and Biogeography, in press
 }
 
 \author{
-Andrés Baselga and David Orme
+AndrÃ©s Baselga and David Orme
 }
 
 

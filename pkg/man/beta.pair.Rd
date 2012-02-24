@@ -1,5 +1,6 @@
 \name{beta.pair}
 \alias{beta.pair}
+\encoding{utf8}
 
 \title{
 Pair-wise dissimilarities
@@ -41,7 +42,7 @@ Global Ecology and Biogeography, in press
 }
 
 \author{
-Andrés Baselga and David Orme
+AndrÃ©s Baselga and David Orme
 }
 
 

@@ -1,5 +1,6 @@
 \name{beta.sample}
 \alias{beta.sample}
+\encoding{utf8}
 
 \title{
 Resampling multiple-site dissimilarity for n sites
@@ -45,7 +46,7 @@ Global Ecology and Biogeography, in press
 }
 
 \author{
-Andrés Baselga and David Orme
+AndrÃ©s Baselga and David Orme
 }
 
 

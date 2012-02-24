@@ -1,7 +1,9 @@
 \name{betapart}
 \alias{betapart-package}
 \alias{betapart}
+\encoding{utf8}
 \docType{package}
+
 \title{Partitioning beta diversity into turnover and nestedness components}
 \description{
 \pkg{betapart} allows computing pair-wise dissimilarities (distance matrices),
@@ -23,17 +25,13 @@ assessing spatial patterns can also be used for measuring temporal changes in co
 function \command{beta.temp}.
 }
 \author{
-Andrés Baselga and David Orme
+AndrÃ©s Baselga and David Orme
 
-Maintainer: Andrés Baselga <andres.baselga@usc.es>
+Maintainer: AndrÃ©s Baselga <andres.baselga@usc.es>
 }
 \references{
 Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
 
 Baselga, A. 2012. The relationship between species replacement, dissimilarity derived from nestedness and nestedness. 
 Global Ecology and Biogeography, in press
-}
-
-\examples{
-
 }
