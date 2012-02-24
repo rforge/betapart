@@ -47,6 +47,7 @@ beta.pair <- function(x, index.family="sorensen"){
 	# run the analysis given the index
 	switch(index.family,
 		sorensen = {
+			beta.sim <- x$min.not.shared / (x$min.not.shared + x$shared)
 			beta.sne <- ((x$max.not.shared - x$min.not.shared) / ((2 * x$shared) + x$sum.not.shared)) * (x$shared / (x$min.not.shared + x$shared))
             beta.sor <- x$sum.not.shared / (2 * x$shared + x$sum.not.shared)
                 
