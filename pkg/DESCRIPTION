@@ -6,5 +6,5 @@ Date: 2012-02-24
 Author: Andres Baselga and David Orme
 Maintainer: Andres Baselga <andres.baselga@usc.es>
 Description: betapart allows computing pair-wise dissimilarities (distance matrices) and multiple-site dissimilarities and to separate the turnover and nestedness components of beta diversity as described in Baselga (2010).
-License: GPL >=2
+License: GPL (>= 2)
 
