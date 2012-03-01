@@ -1,4 +1,4 @@
-﻿\name{beta.sample}
+\name{beta.sample}
 \alias{beta.sample}
 \encoding{utf8}
 
@@ -41,7 +41,7 @@ For \code{index.family="jaccard"}:
 \references{
 Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
 
-Baselga, A. 2012. The relationship between species replacement, dissimilarity derived from nestedness, and nestedness. 
+Baselga, A. 2012. The relationship between species replacement, dissimilarity derived from nestedness and nestedness. 
 Global Ecology and Biogeography, in press
 }
 
