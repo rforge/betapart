@@ -10,8 +10,8 @@ The data consists of binary presence/absence matrices for 569 bird species acros
 \format{
   Two matrices (bbs1980 and bbs2000) of identical structure showing the presence/absence of the species as binary data.
   \describe{
-    \item{\code{statenum}}{US states by number.}
-    \item{\code{aou}}{Species idenity by AOU ID number.}
+    \item{\code{state}}{US states by USPS two letter codes.}
+    \item{\code{aou}}{Species identity by AOU species ID numbers.}
   }
 }
 
