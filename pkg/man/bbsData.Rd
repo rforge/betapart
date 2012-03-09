@@ -1,4 +1,5 @@
 \name{bbsData}
+\alias{bbsData}
 \alias{bbs1980}
 \alias{bbs2000}
 \docType{data}
