@@ -5,7 +5,7 @@
 exportPattern(".")
 
 # Import required packages
-import(geometry)
-import(rcdd)
 suggest(vegan)
+suggest(geometry)
+suggest(rcdd)
 
