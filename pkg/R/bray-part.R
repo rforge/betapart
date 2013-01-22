@@ -17,6 +17,6 @@ bray.part<-function (x) {
 	bray.bal<-as.dist(t(upper.tri(result)*result))
 	bray.gra=bray-bray.bal
 
-	results<-list(bray=bray, bray.bal=bray.bal, bray.gra=bray.gra)
+	results<-list( bray.bal=bray.bal, bray.gra=bray.gra, bray=bray)
 	return(results)
 }
