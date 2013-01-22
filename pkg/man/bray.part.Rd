@@ -31,6 +31,7 @@ between sites, measured as the Bray-Curtis index}
 \references{
 Baselga, A. in press. Separating the two components of abundance-based dissimilarity: balanced changes in 
 abundance vs. abundance gradients. Methods in Ecology and Evolution. DOI: 10.1111/2041-210X.12029
+}
 
 
 \author{
@@ -39,7 +40,7 @@ Andrés Baselga
 
 
 \seealso{
-\code{\link{beta.multi}}, \code{\link{beta.sample}}, \code{\link{betapart.core}}, \code{\link{beta.temp}}
+\code{\link{beta.pair}}
 }
 \examples{
 require(vegan)
