@@ -4,3 +4,7 @@
 # Export all names
 exportPattern(".")
 
+# Import required packages
+import(geometry)
+import(rcdd) 
+
