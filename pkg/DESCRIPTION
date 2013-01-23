@@ -5,5 +5,8 @@ Version: 1.2
 Date: 2013-01-22
 Author: Andres Baselga, David Orme and Sebastien Villeger
 Maintainer: Andres Baselga <andres.baselga@usc.es>
+Imports: geometry, rcdd
+Suggests: vegan
 Description: betapart allows computing pair-wise dissimilarities (distance matrices) and multiple-site dissimilarities, separating the turnover and nestedness components of incidence-based dissimilarity (beta diversity) and the balanced variation and abundance gradient components of abundance based dissimilarity.
 License: GPL (>= 2)
+
