@@ -1,4 +1,4 @@
-bray.part<-function (x) {
+bray.part<-function(x) {
 	x <- as.matrix(x)
 	result<-matrix(nrow=nrow(x),ncol=nrow(x))
 	rownames(result)<-rownames(x)
