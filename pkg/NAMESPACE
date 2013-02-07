@@ -5,4 +5,3 @@ exportPattern(".")
 
 # Import required packages
 import(geometry, rcdd)
-suggest(vegan)
