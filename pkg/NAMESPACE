@@ -1,5 +1,3 @@
-useDynLib(betapart)
-
 # Export all names
 exportPattern(".")
 
