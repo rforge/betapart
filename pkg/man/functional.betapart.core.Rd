@@ -50,7 +50,7 @@ Villéger S., Novack-Gottshal P. & Mouillot D. 2011. The multidimensionality of 
 Baselga, A. 2012. The relationship between species replacement, dissimilarity derived from nestedness, and nestedness. 
 Global Ecology and Biogeography 21, 1223-1232
 
-Villéger, S. Grenouillet, G., Brosse, S. 2012. Decomposing functional beta-diversity reveals that low functional beta-diversity is driven by low functional turnover in European fish assemblages. Global Ecology and Biogeography, in press
+Villéger, S. Grenouillet, G., Brosse, S. in press. Decomposing functional beta-diversity reveals that low functional beta-diversity is driven by low functional turnover in European fish assemblages. Global Ecology and Biogeography, DOI: 10.1111/geb.12021
 }
 
 \author{
