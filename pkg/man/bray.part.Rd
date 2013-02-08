@@ -3,7 +3,7 @@
 \encoding{utf8}
 
 \title{
-Pair-wise Bray-Curtis dissimilarities
+Partitioning pair-wise Bray-Curtis dissimilarities
 }
 \description{
 Computes 3 distance matrices accounting for the balanced variation and abundance gradient components 
