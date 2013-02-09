@@ -28,7 +28,7 @@ function \command{beta.temp}.
 This framework has been extended for functional beta diversity with commands \command{functional.beta.pair}, 
 \command{functional.beta.pair} and \command{functional.beta.multi}.
 Likewise, an analogous framework has been implemented for separating the two components of Bray-Curtis abundance-based 
-dissimilarity (balanced changes in abundance vs. abundance gradients) using ommands \command{bray.part}.
+dissimilarity (balanced changes in abundance vs. abundance gradients) using command \command{bray.part}.
 }
 \author{
 Andrés Baselga, David Orme and Sébastien Villeger
