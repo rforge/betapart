@@ -11,7 +11,7 @@ and the nestedness components of functional beta diversity, and the sum of both 
 Functional dissimilarities are based on volume of convex hulls intersections in a multidimensional functional space.
 }
 \usage{
-functional.beta.multi(x, traits, index.family="sorensen")
+functional.beta.multi(x, traits, index.family="sorensen", warning.time=TRUE)
 }
 
 \arguments{
@@ -19,6 +19,7 @@ functional.beta.multi(x, traits, index.family="sorensen")
 be a \code{functional.betapart} object derived from the \code{functional.betapart.core} function}
 \item{traits}{ if \code{x} is not a \code{functional.betapart} object, a data frame, where rows are species and columns are functional space dimensions (i.e. quantitative traits or synthetic axes after PCoA). Number of species in each site must be strictly higher than number of dimensions. Number of dimensions should not exceed 4 and number of sites should not exceed 10. See details in \code{\link{functional.betapart.core}}.}
 \item{index.family}{ family of dissimilarity indices, partial match of \code{"sorensen"} or \code{"jaccard"}.}
+\item{warning.time}{ a logical value indicating whether computation of multiple-site dissimilarities would stop if number of dimensions exceeds 4 or if number of sites exceeds 10. If turn to \code{FALSE}, computation process can be tracked in the \code{step.fbc.txt} file, see \code{Details}.}
 }
 
 \value{
