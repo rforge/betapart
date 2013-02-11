@@ -2,4 +2,5 @@
 exportPattern(".")
 
 # Import required packages
-import(geometry, rcdd)
+importFrom(geometry, convhulln)
+importFrom(rcdd, d2q, redundant, scdd, q2d)
