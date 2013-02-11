@@ -25,7 +25,7 @@ for computing many indices. The multiple-site values can be randomly sampled a s
 times for a specified number of sites using the function \command{beta.sample}. The aforementioned indices used for 
 assessing spatial patterns can also be used for measuring temporal changes in community composition with the 
 function \command{beta.temp}.
-This framework has been extended for functional beta diversity with commands \command{functional.beta.pair}, 
+This framework has been extended for functional beta diversity with commands \command{functional.betapart.core}, 
 \command{functional.beta.pair} and \command{functional.beta.multi}.
 Likewise, an analogous framework has been implemented for separating the two components of Bray-Curtis abundance-based 
 dissimilarity (balanced changes in abundance vs. abundance gradients) using command \command{bray.part}.
