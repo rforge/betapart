@@ -1,8 +1,7 @@
 functional.betapart.core<-function(x, traits, multi=TRUE, warning.time=TRUE, return.details=FALSE) 
 {
 
-	require(geometry)
-	require(rcdd) 
+	 
 
 
     if (!is.matrix(x)) {
