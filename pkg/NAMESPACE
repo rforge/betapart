@@ -4,3 +4,5 @@ exportPattern(".")
 # Import required packages
 importFrom(geometry, convhulln)
 importFrom(rcdd, d2q, redundant, scdd, q2d)
+importFrom(ape, drop.tip)
+importFrom(picante, node.age)
