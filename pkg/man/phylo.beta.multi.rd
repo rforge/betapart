@@ -1,5 +1,5 @@
-\name{phylo.beta.pair}
-\alias{phylo.beta.pair}
+\name{phylo.beta.multi}
+\alias{phylo.beta.multi}
 \encoding{utf8}
 
 \title{
@@ -63,7 +63,8 @@ Julien De Bortoli (juldebortoli@yahoo.fr) and Fabien Leprieur(fabien.leprieur@un
 \examples{
 
 # fake tree for 8 species (sp1 to sp8)
-fake.tree<-read.tree(text="(((sp1:1,sp2:1):5,(sp3:3,sp4:3):3):2,((sp5:1,sp6:1):6,(sp7:6,sp8:6):1):1);")
+fake.tree<-read.tree(text="(((sp1:1,sp2:1):5,(sp3:3,sp4:3):3):2,((sp5:1,sp6:1):6,
+(sp7:6,sp8:6):1):1);")
 plot(fake.tree)
 
 # fake community table with 6 assemblages (A to F) with 8 species (sp1 to sp8)

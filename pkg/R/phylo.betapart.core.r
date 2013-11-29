@@ -1,9 +1,6 @@
 phylo.betapart.core<-function(x, tree)
 {
 
-	require(picante)
-
-
     if (!is.matrix(x)) {
         x <- as.matrix(x)
     }

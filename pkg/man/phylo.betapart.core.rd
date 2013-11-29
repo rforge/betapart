@@ -18,9 +18,6 @@ phylo.betapart.core(x, tree)
 \item{tree}{ a phylogenetic tree of class phylo with tips names identic to species names from the community matrix.}
 }
 
-\details{
-}
-
 \value{
 The function returns a list with:
 \item{sumSi}{ the sum of the phylogenetic diversity values of all sites}
@@ -55,20 +52,21 @@ Julien De Bortoli (juldebortoli@yahoo.fr) and Fabien Leprieur(fabien.leprieur@un
 }
 \examples{
 
-# fake tree for 8 species (sp1 to sp8)
-fake.tree<-read.tree(text="(((sp1:1,sp2:1):5,(sp3:3,sp4:3):3):2,((sp5:1,sp6:1):6,(sp7:6,sp8:6):1):1);")
-plot(fake.tree)
+# toy tree for 8 species (sp1 to sp8)
+toy.tree<-read.tree(text="(((sp1:1,sp2:1):5,(sp3:3,sp4:3):3):2,((sp5:1,sp6:1):6,
+(sp7:6,sp8:6):1):1);")
+plot(toy.tree)
 
-# fake community table with 6 assemblages (A to F) with 8 species (sp1 to sp8)
-fake.comm<-matrix(nrow=6, ncol=8)
-rownames(fake.comm)<-c("A","B","C","D","E","F")
-colnames(fake.comm)<-c("sp1","sp2","sp3","sp4","sp5","sp6","sp7","sp8")
-fake.comm[1,]<-c(1,1,1,0,0,0,0,0)
-fake.comm[2,]<-c(0,1,1,1,0,0,0,0)
-fake.comm[3,]<-c(0,0,1,1,1,0,0,0)
-fake.comm[4,]<-c(0,0,1,1,1,1,0,0)
-fake.comm[5,]<-c(0,0,0,1,1,1,1,0)
-fake.comm[6,]<-c(0,0,1,1,1,1,1,1)
+# toy community table with 6 assemblages (A to F) with 8 species (sp1 to sp8)
+toy.comm<-matrix(nrow=6, ncol=8)
+rownames(toy.comm)<-c("A","B","C","D","E","F")
+colnames(toy.comm)<-c("sp1","sp2","sp3","sp4","sp5","sp6","sp7","sp8")
+toy.comm[1,]<-c(1,1,1,0,0,0,0,0)
+toy.comm[2,]<-c(0,1,1,1,0,0,0,0)
+toy.comm[3,]<-c(0,0,1,1,1,0,0,0)
+toy.comm[4,]<-c(0,0,1,1,1,1,0,0)
+toy.comm[5,]<-c(0,0,0,1,1,1,1,0)
+toy.comm[6,]<-c(0,0,1,1,1,1,1,1)
 
-fake.phylocore<-phylo.betapart.core(fake.comm, fake.tree)
+toy.phylocore<-phylo.betapart.core(toy.comm, toy.tree)
 }
