@@ -108,7 +108,7 @@ phylo.betapart.core<-function(x, tree)
     # returning results of functional.betapart.core
     phylo.computations<-list( sumSi=sum(pd),St=pd.tot.multi, shared = dist.mat(com,shared), sum.not.shared = dist.mat(com,sum.not.shared),
     								max.not.shared = dist.mat(com,max.not.shared), min.not.shared = dist.mat(com,min.not.shared))
-
+	class(phylo.computations) <- "phylo.betapart"
     return(phylo.computations)
 
 } # end of function

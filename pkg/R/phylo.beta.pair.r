@@ -1,8 +1,12 @@
 phylo.beta.pair<-function (x, tree, index.family = "sorensen")
 {
     index.family <- match.arg(index.family, c("jaccard", "sorensen"))
+   
+    pbc<-x
+    if (!inherits(x, "phylo.betapart")) {
     pbc <- phylo.betapart.core(x,tree)
-
+    } # end of computing core results
+	
         ############ Paired matrix to distance matrix conversion (utility function) #######################
 
     dist.mat <- function(com,pair) {

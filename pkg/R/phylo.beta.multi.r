@@ -1,7 +1,10 @@
 phylo.beta.multi<-function (x, tree, index.family = "sorensen")
 {
     index.family <- match.arg(index.family, c("jaccard", "sorensen"))
+    pbc<-x
+    if (!inherits(x, "phylo.betapart")) {
     pbc <- phylo.betapart.core(x,tree)
+    } # end of computing core results
 
     switch(index.family, sorensen = {
         phylo.beta.SIM <- sum(pbc$min.not.shared)/(pbc$sumSi - pbc$St + sum(pbc$min.not.shared))

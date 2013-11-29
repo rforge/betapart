@@ -53,7 +53,7 @@ Lozupone C, Knight R (2005) UniFrac: a new phylogenetic method for comparing mic
 }
 
 \author{
-Julien De Bortoli (juldebortoli@yahoo.fr) and Fabien Leprieur(fabien.leprieur@univ-montp2.fr)
+Julien De Bortoli (juldebortoli@yahoo.fr), Fabien Leprieur(fabien.leprieur@univ-montp2.fr), Andrés Baselga and David Orme
 }
 
 
