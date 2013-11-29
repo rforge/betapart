@@ -53,8 +53,8 @@ Julien De Bortoli (juldebortoli@yahoo.fr), Fabien Leprieur(fabien.leprieur@univ-
 \examples{
 
 # toy tree for 8 species (sp1 to sp8)
-toy.tree<-read.tree(text="(((sp1:1,sp2:1):5,(sp3:3,sp4:3):3):2,((sp5:1,sp6:1):6,
-(sp7:6,sp8:6):1):1);")
+require(ape)
+toy.tree<-read.tree(text="(((sp1:1,sp2:1):5,(sp3:3,sp4:3):3):2,((sp5:1,sp6:1):6,(sp7:6,sp8:6):1):1);")
 plot(toy.tree)
 
 # toy community table with 6 assemblages (A to F) with 8 species (sp1 to sp8)
