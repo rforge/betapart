@@ -6,7 +6,7 @@ Date: 2013-11-28
 Author: Andres Baselga, David Orme, Sebastien Villeger, Julien De Bortoli and Fabien Leprieur
 Maintainer: Andres Baselga <andres.baselga@usc.es>
 Imports: ape, geometry, picante, rcdd
-Suggests: ape, vegan
+Suggests: vegan
 Description: betapart allows computing pair-wise dissimilarities (distance matrices) and multiple-site dissimilarities, separating the turnover and nestedness components of incidence-based dissimilarity (beta diversity), functional dissimilarity, phylogenetic dissimilarity and the balanced variation and abundance gradient components of abundance based dissimilarity.
 License: GPL (>= 2)
 
