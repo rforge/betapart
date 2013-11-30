@@ -7,28 +7,14 @@ phylo.beta.pair<-function (x, tree, index.family = "sorensen")
     pbc <- phylo.betapart.core(x,tree)
     } # end of computing core results
 	
-        ############ Paired matrix to distance matrix conversion (utility function) #######################
-
-    dist.mat <- function(com,pair) {
-
-      ncom <- nrow(com)
-      distmat <- matrix(nrow=ncom,ncol=ncom,0,dimnames=list(rownames(com),rownames(com)))
-      st <- c(0,cumsum(seq(ncom-1,2)))+1
-      end <- cumsum(seq(ncom-1,1))
-      for (i in 1:(ncom-1)) distmat[i,(ncom:(seq(1,ncom)[i]))]=c(pair[end[i]:st[i]],0)
-      distmat <- as.dist(t(distmat))
-      return(distmat)
-
-    } # end of function dist.mat
-
-    switch(index.family, sorensen = {
+	switch(index.family, sorensen = {
         phylo.beta.sim <- pbc$min.not.shared/(pbc$min.not.shared + pbc$shared)
 
         phylo.beta.sne <- ((pbc$max.not.shared - pbc$min.not.shared)/((2 * pbc$shared) + pbc$sum.not.shared)) * (pbc$shared/(pbc$min.not.shared + pbc$shared))
 
         phylo.beta.sor <- pbc$sum.not.shared/(2 * pbc$shared + pbc$sum.not.shared)
 
-        phylo.pairwise <- list(phylo.beta.sim = dist.mat(x,phylo.beta.sim), phylo.beta.sne = dist.mat(x,phylo.beta.sne), phylo.beta.sor = dist.mat(x,phylo.beta.sor))
+        phylo.pairwise <- list(phylo.beta.sim = phylo.beta.sim, phylo.beta.sne = phylo.beta.sne, phylo.beta.sor = phylo.beta.sor)
     								},
 
     					 jaccard = {
@@ -38,7 +24,7 @@ phylo.beta.pair<-function (x, tree, index.family = "sorensen")
 
         phylo.beta.jac <- pbc$sum.not.shared/(pbc$shared + pbc$sum.not.shared)
 
-        phylo.pairwise <- list(phylo.beta.jtu = dist.mat(x,phylo.beta.jtu), phylo.beta.jne = dist.mat(x,phylo.beta.jne), phylo.beta.jac = dist.mat(x,phylo.beta.jac))
+        phylo.pairwise <- list(phylo.beta.jtu = phylo.beta.jtu, phylo.beta.jne = phylo.beta.jne, phylo.beta.jac = phylo.beta.jac)
     								}
 
     ) # end of switch
