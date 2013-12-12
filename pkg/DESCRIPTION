@@ -2,7 +2,7 @@ Package: betapart
 Type: Package
 Title: Partitioning beta diversity into turnover and nestedness components
 Version: 1.3
-Date: 2013-11-28
+Date: 2013-12-12
 Author: Andres Baselga, David Orme, Sebastien Villeger, Julien De Bortoli and Fabien Leprieur
 Maintainer: Andres Baselga <andres.baselga@usc.es>
 Imports: ape, geometry, picante, rcdd
