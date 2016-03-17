@@ -1,6 +1,8 @@
-﻿\name{beta.pair}
-\alias{beta.pair}
+﻿
 \encoding{utf8}
+\name{beta.pair}
+\alias{beta.pair}
+
 
 \title{
 Incidence-based pair-wise dissimilarities

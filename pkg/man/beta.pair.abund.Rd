@@ -1,6 +1,8 @@
-﻿\name{beta.pair.abund}
-\alias{beta.pair.abund}
+﻿
 \encoding{utf8}
+\name{beta.pair.abund}
+\alias{beta.pair.abund}
+
 
 \title{
 Abundance-based pair-wise dissimilarities
