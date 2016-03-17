@@ -1,5 +1,4 @@
-﻿
-\encoding{utf8}
+﻿\encoding{utf8}
 \name{beta.pair}
 \alias{beta.pair}
 
@@ -57,4 +56,3 @@ Andrés Baselga and David Orme
 data(ceram.s)
 ceram.dist<-beta.pair(ceram.s, index.family="jac")
 }
-
