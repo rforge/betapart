@@ -1,14 +1,16 @@
-\name{beta.pair}
+﻿\name{beta.pair}
 \alias{beta.pair}
 \encoding{utf8}
 
 \title{
-Pair-wise dissimilarities
+Incidence-based pair-wise dissimilarities
 }
+
 \description{
 Computes 3 distance matrices accounting for the spatial turnover and nestedness components 
 of beta diversity, and the sum of both values
 }
+
 \usage{
 beta.pair(x, index.family="sorensen")
 }
