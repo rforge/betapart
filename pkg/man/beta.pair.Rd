@@ -1,5 +1,4 @@
-﻿\encoding{utf8}
-\name{beta.pair}
+﻿\name{beta.pair}
 \alias{beta.pair}
 
 
