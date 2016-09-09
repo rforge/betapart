@@ -37,8 +37,8 @@ betapart.core.abund <- function(x){
 
 
 
-	computations<-list(data=x, multiple.shared=multiple.shared, pair.shared=pair.shared, pair.max.not.shared=pair.max.not.shared, 
-	                   pair.min.not.shared=pair.min.not.shared, pair.sum.not.shared=pair.min.not.shared+pair.max.not.shared)
+	computations<-list(data=x, multiple.shared.abund=multiple.shared, pair.shared.abund=pair.shared, pair.min.not.shared.abund=pair.min.not.shared, 
+		pair.max.not.shared.abund=pair.max.not.shared, pair.not.shared.abund=pair.min.not.shared+pair.max.not.shared)
     class(computations)<-"betapart.abund"
 
 	return(computations)
