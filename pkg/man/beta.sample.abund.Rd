@@ -60,12 +60,12 @@ data(ceram.n)
 beta.ceram.s<-beta.sample(ceram.s, index.family="bray", sites=10, samples=100)
 beta.ceram.n<-beta.sample(ceram.n, index.family="bray", sites=10, samples=100)
 
-# Plot the distributions of beta.SIM in Southern Europe (red) 
+# Plot the distributions of beta.BRAY.BAL in Southern Europe (red) 
 # and Northern Europe (blue)
-plot(density(beta.ceram.s$sampled.values$beta.SIM), col="red", xlim=c(0,1))
-lines(density(beta.ceram.n$sampled.values$beta.SIM), col="blue")
+plot(density(beta.ceram.s$sampled.values$beta.BRAY.BAL), col="red", xlim=c(0,1))
+lines(density(beta.ceram.n$sampled.values$beta.BRAY.BAL), col="blue")
 
-# Compute the p-value of difference in beta.SIM between South and North 
+# Compute the p-value of difference in beta.BRAY.BAL between South and North 
 # (i.e. the probability of finding in the North a higher value than 
 # in the South)
 p.value.beta.BRAY.BAl<-length(which(beta.ceram.s$sampled.values$beta.BRAY.BAL<
