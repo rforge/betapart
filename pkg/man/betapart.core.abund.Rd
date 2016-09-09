@@ -3,14 +3,14 @@
 \encoding{utf8}
 
 \title{
-Core calculations of betapart
+Core calculations of betapart for abundance-based measures
 }
 \description{
-Computes the basic quantities needed for computing the multiple-site beta diversity measures
-and pairwise dissimilarity matrices.
+Computes the basic quantities needed for computing the abundance-based multiple-site 
+dissimilarity measuresc and pairwise dissimilarity matrices.
 }
 \usage{
-betapart.core(x)
+betapart.core.abund(x)
 }
 
 \arguments{
@@ -18,39 +18,39 @@ betapart.core(x)
 }
 
 \value{
-The function returns an object of class \code{betapart} with the following elements:
-\item{sumSi}{ the sum of the species richness values of all sites}
-\item{St}{ the total richness in the dataset}
-\item{a}{ the multiple-site analog of the shared species term}
-\item{shared}{ a matrix containing the number of species shared between pairs of sites}
-\item{not.shared}{ a matrix containing the number of species not shared between pairs of sites: b, c}
-\item{sum.not.shared}{ a matrix containing the total number of species not shared between pairs of sites: b+c}
-\item{max.not.shared}{ a matrix containing the total maximum number of species not shared between pairs of sites: max(b,c)}
-\item{min.not.shared}{ a matrix containing the total minimum number of species not shared between pairs of sites: min(b,c)}
+The function returns an object of class \code{betapart.abund} with the following elements:
+\item{multiple.shared.abund}{ the multiple-site interesection component in terms of abundances (AM)}
+\item{pair.shared.abund}{ a matrix containing the agreement in abundance between pairs of sites (A)}
+\item{min.not.shared.abund}{ a matrix containing the minimum disagreement in abundance between pairs of sites: min(B,C)}
+\item{max.not.shared.abund}{ a matrix containing the maximum disagreement in abundance between pairs of sites between pairs of sites: max(B,C)}
+\item{pair.not.shared.abund}{ a matrix containing the total disagreement in abundance between pairs of sites: B+C}
 }
 
 \references{
-Baselga, A. 2010. Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19:134-143
+Baselga, A. 2013. Separating the two components of abundance-based dissimilarity: balanced changes in 
+abundance vs. abundance gradients. Methods in Ecology and Evolution 4: 552–557
 
-Baselga, A. 2012. The relationship between species replacement, dissimilarity derived from nestedness, and nestedness. 
-Global Ecology and Biogeography 21, 1223-1232
+Legendre, P. 2014. Interpreting the replacement and richness difference components of beta diversity. 
+Global Ecology and Biogeography, 23: 1324–1334
+
+Baselga, A. 2016. Partitioning abundance-based multiple-site dissimilarity into components: balanced variation in abundance and abundance gradients. Methods in Ecology and Evolution, in press
 }
 
 \author{
-Andrés Baselga and David Orme
+Andrés Baselga
 }
 
 
 \seealso{
-\code{\link{beta.multi}}, \code{\link{beta.pair}}, \code{\link{beta.sample}}, \code{\link{beta.temp}},
+\code{\link{beta.multi.abund}}, \code{\link{beta.pair.abund}}, \code{\link{beta.sample.abund}}, \code{\link{betapart.core}}
 }
 \examples{
 data(ceram.s)
-ceram.core.s<-betapart.core(ceram.s)
-ceram.dist.jac<-beta.pair(ceram.core.s, index.family="jac")
-ceram.dist.sor<-beta.pair(ceram.core.s, index.family="sor")
-ceram.multi.jac<-beta.multi(ceram.core.s, index.family="jac")
-ceram.multi.sor<-beta.multi(ceram.core.s, index.family="sor")
+ceram.core.s<-betapart.core.abund(ceram.s)
+ceram.dist.bray<-beta.pair.abund(ceram.core.s, index.family="bray")
+ceram.dist.ruz<-beta.pair.abund(ceram.core.s, index.family="ruz")
+ceram.multi.bray<-beta.multi.abund(ceram.core.s, index.family="bray")
+ceram.multi.ruz<-beta.multi.abund(ceram.core.s, index.family="ruz")
 
 }
 
