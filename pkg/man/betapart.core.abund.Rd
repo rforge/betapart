@@ -1,9 +1,9 @@
-\name{betapart.core}
-\alias{betapart.core}
+\name{betapart.core.abund}
+\alias{betapart.core.abund}
 \encoding{utf8}
 
 \title{
-Core calculations of betapart for abundance-based measures
+Core calculations of betapart for abundance-based dissimilarity measures
 }
 \description{
 Computes the basic quantities needed for computing the abundance-based multiple-site 

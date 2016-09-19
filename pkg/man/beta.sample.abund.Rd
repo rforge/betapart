@@ -1,13 +1,13 @@
-\name{beta.sample}
-\alias{beta.sample}
+\name{beta.sample.abund}
+\alias{beta.sample.abund}
 \encoding{utf8}
 
 \title{
-Resampling multiple-site dissimilarity for n sites
+Resampling abundance-based multiple-site dissimilarity for n sites
 }
 \description{
-Resamples the 3 multiple-site dissimilarities (turnover, nestedness-resultant fraction, and overall 
-beta diversity) for a subset of sites of the original data frame.
+Resamples the 3 abundance-based multiple-site dissimilarities (balanced variation fraction,abundance-gradient fraction, and overall 
+dissimilarity) for a subset of sites of the original data frame.
 }
 \usage{
 beta.sample.abund(x, index.family="bray", sites=10, samples=100)
@@ -57,8 +57,8 @@ data(ceram.n)
 
 # Resample 100 times the multiple-site dissimilarities
 # for 10 countries.
-beta.ceram.s<-beta.sample(ceram.s, index.family="bray", sites=10, samples=100)
-beta.ceram.n<-beta.sample(ceram.n, index.family="bray", sites=10, samples=100)
+beta.ceram.s<-beta.sample.abund(ceram.s, index.family="bray", sites=10, samples=100)
+beta.ceram.n<-beta.sample.abund(ceram.n, index.family="bray", sites=10, samples=100)
 
 # Plot the distributions of beta.BRAY.BAL in Southern Europe (red) 
 # and Northern Europe (blue)

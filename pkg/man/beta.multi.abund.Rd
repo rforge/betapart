@@ -1,9 +1,9 @@
-\name{beta.multi}
-\alias{beta.multi}
+\name{beta.multi.abund}
+\alias{beta.multi.abund}
 \encoding{utf8}
 
 \title{
-Multiple-site dissimilarities
+Abundance-based multiple-site dissimilarities
 }
 \description{
 Computes 3 multiple-site dissimilarities accounting for the (i) balanced variation 
@@ -31,7 +31,7 @@ For \code{index.family="bray"} the three indices are:
 For \code{index.family="ruzicka"} the three indices are:
 \item{beta.RUZ.BAL}{ value of the balanced variation component of Ruzicka multiple-site dissimilarity}
 \item{beta.RUZ.GRA}{ value of the abundance-gradient component of Ruzicka multiple-site dissimilarity}
-\item{beta.RUZ{ value of the overall dissimilarity, measured as Ruzicka multiple-site dissimilarity}
+\item{beta.RUZ}{ value of the overall dissimilarity, measured as Ruzicka multiple-site dissimilarity}
 }
 
 \references{
