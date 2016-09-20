@@ -45,12 +45,10 @@ Andrés Baselga
 \code{\link{beta.multi.abund}}, \code{\link{beta.pair.abund}}, \code{\link{beta.sample.abund}}, \code{\link{betapart.core}}
 }
 \examples{
-data(ceram.s)
-ceram.core.s<-betapart.core.abund(ceram.s)
-ceram.dist.bray<-beta.pair.abund(ceram.core.s, index.family="bray")
-ceram.dist.ruz<-beta.pair.abund(ceram.core.s, index.family="ruz")
-ceram.multi.bray<-beta.multi.abund(ceram.core.s, index.family="bray")
-ceram.multi.ruz<-beta.multi.abund(ceram.core.s, index.family="ruz")
-
+require(vegan)
+data(BCI)
+core.BCI<-betapart.core.abund(BCI)
+pair.BCI<-beta.pair.abund(core.BCI)
+multi.BCI<-beta.multi.abund(core.BCI)
 }
 

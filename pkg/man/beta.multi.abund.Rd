@@ -47,8 +47,9 @@ Andrés Baselga
 \code{\link{beta.pair.abund}}, \code{\link{beta.sample.abund}}, \code{\link{betapart.core.abund}}, \code{\link{beta.multi}}
 }
 \examples{
-data(ceram.s)
-ceram.beta<-beta.multi(ceram.s, index.family="sor")
+require(vegan)
+data(BCI)
+beta.multi.abund(BCI, index.family="bray")
 }
 
 

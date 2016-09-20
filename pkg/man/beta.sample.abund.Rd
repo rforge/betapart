@@ -51,27 +51,8 @@ Andrés Baselga
 \code{\link{beta.multi.abund}}, \code{\link{beta.sample}}
 }
 \examples{
-# Read the data for Northern and Southern European cerambycids
-data(ceram.s)
-data(ceram.n)
-
-# Resample 100 times the multiple-site dissimilarities
-# for 10 countries.
-beta.ceram.s<-beta.sample.abund(ceram.s, index.family="bray", sites=10, samples=100)
-beta.ceram.n<-beta.sample.abund(ceram.n, index.family="bray", sites=10, samples=100)
-
-# Plot the distributions of beta.BRAY.BAL in Southern Europe (red) 
-# and Northern Europe (blue)
-plot(density(beta.ceram.s$sampled.values$beta.BRAY.BAL), col="red", xlim=c(0,1))
-lines(density(beta.ceram.n$sampled.values$beta.BRAY.BAL), col="blue")
-
-# Compute the p-value of difference in beta.BRAY.BAL between South and North 
-# (i.e. the probability of finding in the North a higher value than 
-# in the South)
-p.value.beta.BRAY.BAl<-length(which(beta.ceram.s$sampled.values$beta.BRAY.BAL<
-beta.ceram.n$sampled.values$beta.BRAY.BAL))/100
-
-p.value.beta.BRAY.BAL
-# The result is 0 and we used 100 samples, so p<0.01
+require(vegan)
+data(BCI)
+beta.sample.abund(BCI, index.family="bray", sites=10, samples=100)
 }
 
