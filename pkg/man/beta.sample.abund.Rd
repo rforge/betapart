@@ -71,7 +71,7 @@ lines(density(beta.ceram.n$sampled.values$beta.BRAY.BAL), col="blue")
 p.value.beta.BRAY.BAl<-length(which(beta.ceram.s$sampled.values$beta.BRAY.BAL<
 beta.ceram.n$sampled.values$beta.BRAY.BAL))/100
 
-p.value.beta.SIM
+p.value.beta.BRAY.BAL
 # The result is 0 and we used 100 samples, so p<0.01
 }
 

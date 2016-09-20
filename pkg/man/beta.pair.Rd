@@ -6,15 +6,14 @@
 Incidence-based pair-wise dissimilarities
 }
 \description{
-Computes 3 distance matrices accounting for the spatial turnover and nestedness components 
-of beta diversity, and the sum of both values
-}
+Computes 3 distance matrices accounting for the spatial turnover and nestedness components of beta diversity, and the sum of both values}
 \usage{
 beta.pair(x, index.family="sorensen")
 }
 \arguments{
-\item{x}{ data frame, where rows are sites and columns are species. Alternatively \code{x} can be a \code{betapart} object derived from the \code{betapart.core} function}
-\item{index.family}{ family of dissimilarity indices, partial match of \code{"sorensen"} or \code{"jaccard"}.
+  \item{x}{ data frame, where rows are sites and columns are species. Alternatively \code{x} can be a \code{betapart} object derived from the \code{betapart.core} function
+}
+  \item{index.family}{ family of dissimilarity indices, partial match of \code{"sorensen"} or \code{"jaccard"}.
 }
 }
 \value{
@@ -35,7 +34,6 @@ Baselga, A. 2010. Partitioning the turnover and nestedness components of beta di
 Baselga, A. 2012. The relationship between species replacement, dissimilarity derived from nestedness, and nestedness. 
 Global Ecology and Biogeography 21, 1223-1232
 }
-
 \author{
 Andrés Baselga and David Orme
 }
