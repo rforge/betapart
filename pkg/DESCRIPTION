@@ -9,4 +9,3 @@ Imports: ape, geometry, picante, rcdd
 Suggests: vegan
 Description: Functions to compute pair-wise dissimilarities (distance matrices) and multiple-site dissimilarities, separating the turnover and nestedness-resultant components of taxonomic (incidence and abundance based), functional and phylogenetic beta diversity.
 License: GPL (>= 2)
-
