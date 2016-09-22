@@ -1,4 +1,4 @@
-\name{beta.pair.abund}
+ï»¿\name{beta.pair.abund}
 \alias{beta.pair.abund}
 \encoding{utf8}
 
@@ -33,12 +33,12 @@ For \code{index.family="ruzicka"} the three matrices are:
 \item{beta.ruz}{ \code{dist} object, dissimilarity matrix accounting for total abundance-based dissimilarity between sites, measured as the Bray-Curtis index}
 }
 \references{
-Baselga, A. 2013. Separating the two components of abundance-based dissimilarity: balanced changes in abundance vs. abundance gradients. Methods in Ecology and Evolution 4: 552–557
+Baselga, A. 2013. Separating the two components of abundance-based dissimilarity: balanced changes in abundance vs. abundance gradients. Methods in Ecology and Evolution 4: 552â€“557
 
-Legendre, P. 2014. Interpreting the replacement and richness difference components of beta diversity. Global Ecology and Biogeography, 23: 1324–1334
+Legendre, P. 2014. Interpreting the replacement and richness difference components of beta diversity. Global Ecology and Biogeography, 23: 1324â€“1334
 }
 \author{
-Andrés Baselga
+AndrÃ©s Baselga
 }
 
 

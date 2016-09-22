@@ -1,4 +1,4 @@
-\name{beta.sample}
+﻿\name{beta.sample}
 \alias{beta.sample}
 \encoding{utf8}
 

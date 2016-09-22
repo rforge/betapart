@@ -1,4 +1,4 @@
-\name{beta.pair}
+﻿\name{beta.pair}
 \alias{beta.pair}
 \encoding{utf8}
 
@@ -38,7 +38,7 @@ Baselga, A. 2010. Partitioning the turnover and nestedness components of beta di
 Baselga, A. 2012. The relationship between species replacement, dissimilarity derived from nestedness, and nestedness. Global Ecology and Biogeography 21, 1223-1232
 }
 \author{
-Andr�s Baselga and David Orme
+Andrés Baselga and David Orme
 }
 
 

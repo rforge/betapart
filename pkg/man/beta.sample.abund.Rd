@@ -1,4 +1,4 @@
-\name{beta.sample.abund}
+﻿\name{beta.sample.abund}
 \alias{beta.sample.abund}
 \encoding{utf8}
 

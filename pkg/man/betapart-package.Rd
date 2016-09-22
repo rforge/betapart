@@ -1,4 +1,4 @@
-\name{betapart}
+﻿\name{betapart}
 \alias{betapart-package}
 \alias{betapart}
 \encoding{utf8}
