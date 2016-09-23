@@ -30,7 +30,7 @@ For \code{index.family="bray"} the three matrices are:
 For \code{index.family="ruzicka"} the three matrices are:
 \item{beta.ruz.bal}{ \code{dist} object, dissimilarity matrix accounting for the dissimilarity derived from balanced variation in abundance between sites}
 \item{beta.ruz.gra}{ \code{dist} object, dissimilarity matrix accounting for the dissimilarity derived from unidirectional abundance gradients}
-\item{beta.ruz}{ \code{dist} object, dissimilarity matrix accounting for total abundance-based dissimilarity between sites, measured as the Bray-Curtis index}
+\item{beta.ruz}{ \code{dist} object, dissimilarity matrix accounting for total abundance-based dissimilarity between sites, measured as the Ruzicka index}
 }
 \references{
 Baselga, A. 2013. Separating the two components of abundance-based dissimilarity: balanced changes in abundance vs. abundance gradients. Methods in Ecology and Evolution 4: 552–557

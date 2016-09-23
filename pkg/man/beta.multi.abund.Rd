@@ -7,7 +7,7 @@ Abundance-based multiple-site dissimilarities
 }
 \description{
 Computes 3 multiple-site dissimilarities accounting for the (i) balanced variation 
-and (ii) abundance gradient components of dissimilarity, and the sum of both values
+and (ii) abundance gradient components of dissimilarity, and the sum of both values (i.e. total abundance-based dissimilarity)
 }
 \usage{
 beta.multi.abund(x, index.family="bray")
