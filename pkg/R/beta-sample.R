@@ -1,4 +1,4 @@
-beta.sample <- function(x, index.family="sorensen", sites=10, samples=100){
+beta.sample <- function(x, index.family="sorensen", sites=nrow(x), samples=1){
 		
 	# test for a valid index
 	index.family <- match.arg(index.family, c('jaccard','sorensen'))

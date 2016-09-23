@@ -1,4 +1,4 @@
-beta.sample.abund<-function (x, index.family = "bray", sites = 10, samples = 100) 
+beta.sample.abund<-function (x, index.family = "bray", sites = nrow(x), samples = 1) 
 {
     index.family <- match.arg(index.family, c("bray", "ruzicka"))
     
