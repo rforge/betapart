@@ -33,7 +33,7 @@ abundance vs. abundance gradients. Methods in Ecology and Evolution 4: 552–557
 Legendre, P. 2014. Interpreting the replacement and richness difference components of beta diversity. 
 Global Ecology and Biogeography, 23: 1324–1334
 
-Baselga, A. 2016. Partitioning abundance-based multiple-site dissimilarity into components: balanced variation in abundance and abundance gradients. Methods in Ecology and Evolution, in press
+Baselga, A. 2017. Partitioning abundance-based multiple-site dissimilarity into components: balanced variation in abundance and abundance gradients. Methods in Ecology and Evolution, in press
 }
 
 \author{

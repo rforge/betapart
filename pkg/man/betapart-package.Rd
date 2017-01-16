@@ -42,7 +42,7 @@ Global Ecology and Biogeography 21, 1223-1232
 Baselga, A. 2013. Separating the two components of abundance-based dissimilarity: balanced changes in abundance vs. 
 abundance gradients. Methods in Ecology and Evolution, 4: 552-557
 
-Baselga, A. 2016. Partitioning abundance-based multiple-site dissimilarity into components: balanced variation in abundance and 
+Baselga, A. 2017. Partitioning abundance-based multiple-site dissimilarity into components: balanced variation in abundance and 
 abundance gradients. Methods in Ecology and Evolution, in press
 
 Baselga A, Leprieur, F. 2015. Comparing methods to separate components of beta diversity. Methods in Ecology and Evolution 6: 1069-1079
