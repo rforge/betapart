@@ -10,7 +10,7 @@ Resamples the 3 abundance-based multiple-site dissimilarities (balanced variatio
 dissimilarity) for a subset of sites of the original data frame.
 }
 \usage{
-beta.sample.abund(x, index.family="bray", sites=10, samples=100)
+beta.sample.abund(x, index.family="bray", sites = nrow(x), samples = 1)
 }
 
 \arguments{
