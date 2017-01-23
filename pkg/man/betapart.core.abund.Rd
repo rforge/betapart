@@ -1,4 +1,4 @@
-﻿\encoding{utf8}
+\encoding{utf8}
 \name{betapart.core.abund}
 \alias{betapart.core.abund}
 

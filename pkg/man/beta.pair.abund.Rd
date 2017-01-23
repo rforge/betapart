@@ -1,4 +1,4 @@
-﻿\encoding{utf8}
+\encoding{utf8}
 \name{beta.pair.abund}
 \alias{beta.pair.abund}
 

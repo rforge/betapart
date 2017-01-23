@@ -1,4 +1,4 @@
-﻿\encoding{utf8}
+\encoding{utf8}
 \name{ceram.n}
 \docType{data}
 \alias{ceram.n}

@@ -1,4 +1,4 @@
-﻿\encoding{utf8}
+\encoding{utf8}
 \name{bray.part}
 \alias{bray.part}
 

@@ -1,4 +1,4 @@
-﻿\encoding{utf8}
+\encoding{utf8}
 \name{beta.multi.abund}
 \alias{beta.multi.abund}
 

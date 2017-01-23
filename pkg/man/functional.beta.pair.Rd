@@ -1,4 +1,4 @@
-﻿\encoding{utf8}
+\encoding{utf8}
 \name{functional.beta.pair}
 \alias{functional.beta.pair}
 
