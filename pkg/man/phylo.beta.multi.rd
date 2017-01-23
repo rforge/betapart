@@ -1,6 +1,6 @@
-﻿\name{phylo.beta.multi}
+﻿\encoding{utf8}
+\name{phylo.beta.multi}
 \alias{phylo.beta.multi}
-\encoding{utf8}
 
 \title{
 Multiple-site phylogenetic dissimilarities

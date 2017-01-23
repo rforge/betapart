@@ -1,6 +1,6 @@
-﻿\name{beta.sample}
+﻿\encoding{utf8}
+\name{beta.sample}
 \alias{beta.sample}
-\encoding{utf8}
 
 \title{
 Resampling multiple-site dissimilarity for n sites
@@ -77,4 +77,3 @@ beta.ceram.n$sampled.values$beta.SIM))/100
 p.value.beta.SIM
 # The result is 0 and we used 100 samples, so p<0.01
 }
-

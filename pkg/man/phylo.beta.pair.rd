@@ -1,6 +1,6 @@
-﻿\name{phylo.beta.pair}
+﻿\encoding{utf8}
+\name{phylo.beta.pair}
 \alias{phylo.beta.pair}
-\encoding{utf8}
 
 \title{
 Pair-wise phylogenetic dissimilarities

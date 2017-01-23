@@ -1,6 +1,6 @@
-﻿\name{beta.pair.abund}
+﻿\encoding{utf8}
+\name{beta.pair.abund}
 \alias{beta.pair.abund}
-\encoding{utf8}
 
 \title{
 Abundance-based pair-wise dissimilarities
@@ -50,4 +50,3 @@ require(vegan)
 data(BCI)
 BCI.pair<-beta.pair.abund(BCI, index.family="bray")
 }
-
