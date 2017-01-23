@@ -52,6 +52,3 @@ Andrés Baselga and David Orme
 data(ceram.s)
 ceram.beta<-beta.multi(ceram.s, index.family="sor")
 }
-
-
-
