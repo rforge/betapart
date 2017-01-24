@@ -5,16 +5,19 @@
 \title{
 Resampling multiple-site dissimilarity for n sites
 }
+
 \description{
 Resamples the 3 multiple-site dissimilarities (turnover, nestedness-resultant fraction, and overall 
 beta diversity) for a subset of sites of the original data frame.
 }
+
 \usage{
-beta.sample(x, index.family="sorensen", sites = nrow(x), samples = 1)
+beta.sample(x, index.family="sorensen", sites=nrow(x$data), samples = 1)
 }
 
 \arguments{
-\item{x}{ data frame, where rows are sites and columns are species}
+\item{x}{ data frame, where rows are sites and columns are species. Alternatively \code{x} can 
+be a \code{betapart} object derived from the \code{betapart.core} function.}
 \item{index.family}{ family of dissimilarity indices, partial match of \code{"sorensen"} or \code{"jaccard"}.}
 \item{sites}{ number of sites for which multiple-site dissimilarities will be computed. If not specified, default is all sites.}
 \item{samples}{ number of repetitions. If not specified, default is 1.}
