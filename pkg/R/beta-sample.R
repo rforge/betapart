@@ -1,4 +1,3 @@
-
 beta.sample <- function(x, index.family="sorensen", sites=nrow(x$data), samples=1){
 		
 	# test for pre-existing betapart objects - validates data in x if not
