@@ -74,6 +74,6 @@ BCI.decay.exp<-decay.model(dissim.BCI, spat.dist, model.type="exp", perm=100)
 BCI.decay.pow<-decay.model(dissim.BCI, spat.dist, model.type="pow", perm=100)
 
 plot.decay(BCI.decay.exp, col=rgb(0,0,0,0.5))
-plot.decay(BCI.decay.exp, col="red", remove.dots=T, add=T)
-plot.decay(BCI.decay.pow, col="blue", remove.dots=T, add=T)
+plot.decay(BCI.decay.exp, col="red", remove.dots=TRUE, add=TRUE)
+plot.decay(BCI.decay.pow, col="blue", remove.dots=TRUE, add=TRUE)
 }
