@@ -14,6 +14,10 @@ or power law function as estimated with decay.model().
 \usage{
 plot.decay(decay.model, xlim=c(0,max(decay.model$data[,1])), ylim=c(0,1), 
 add=FALSE, remove.dots=FALSE, col="black", pch=1, lty=1, lwd=5, cex=1, ...)
+\method{plot}{plot.decay}(x, y,  ...)
+\method{points}{plot.decay}(x, y,  ...)
+\method{lines}{plot.decay}(x, y,  ...)
+
 }
 
 \arguments{
@@ -63,6 +67,6 @@ BCI.decay.exp<-decay.model(dissim.BCI, spat.dist, model.type="exp", perm=100)
 BCI.decay.pow<-decay.model(dissim.BCI, spat.dist, model.type="pow", perm=100)
 
 plot.decay(BCI.decay.exp, col=rgb(0,0,0,0.5))
-plot.decay(BCI.decay.exp, col="red", remove.dots=T, add=T)
-plot.decay(BCI.decay.pow, col="blue", remove.dots=T, add=T)
+plot.decay(BCI.decay.exp, col="red", remove.dots=TRUE, add=TRUE)
+plot.decay(BCI.decay.pow, col="blue", remove.dots=TRUE, add=TRUE)
 }
