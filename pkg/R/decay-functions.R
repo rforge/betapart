@@ -185,7 +185,7 @@ names(mean.boot)<-c("a.intercept", "b.slope")
 sd.boot=c(sd(boot.coefs[,1]), sd(boot.coefs[,2]))
 names(sd.boot)<-c("a.intercept", "b.slope")
 
-result<-list( model.type=x$model.type,y.type=x$y.type, original.coefs=original.coefs, boot.coefs=boot.coefs, mean.boot=mean.boot, sd.boot=sd.boot,time=proc.time() - ptm)
+result<-list( model.type=x$model.type,y.type=x$y.type, boot.coefs=boot.coefs, original.coefs=original.coefs, mean.boot=mean.boot, sd.boot=sd.boot,time=proc.time() - ptm)
 result
 }
 
