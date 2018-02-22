@@ -12,7 +12,8 @@ or power law function as estimated with decay.model().
 }
 
 \usage{
-
+plot.decay(decay.model, xlim=c(0,max(decay.model$data[,1])), ylim=c(0,1), 
+add=FALSE, remove.dots=FALSE, col="black", pch=1, lty=1, lwd=5, cex=1, ...)
 \method{plot}{decay}(decay.model, xlim=c(0,max(decay.model$data[,1])), ylim=c(0,1), 
 add=FALSE, remove.dots=FALSE, col="black", pch=1, lty=1, lwd=5, cex=1, ...)
 
