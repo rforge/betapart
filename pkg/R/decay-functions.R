@@ -103,55 +103,55 @@ return(parameters)
 ################################################################################
 ##### A function for plotting the decay models
 
-plot.decay<-function(decay.model, xlim=c(0,max(decay.model$data[,1])), ylim=c(0,1), add=FALSE, remove.dots=FALSE, 
+plot.decay<-function(x, xlim=c(0,max(x$data[,1])), ylim=c(0,1), add=FALSE, remove.dots=FALSE, 
 col="black", pch=1, lty=1, lwd=5, cex=1, ...){
-if (!inherits(decay.model, "decay")){	
+if (!inherits(x, "decay")){	
 		stop("The input is not a distance-decay model fitted with decay.model().",call.=TRUE)
 	}
 
 if(!remove.dots){pch=pch}
 else{pch=""}
-dista<-sort(unique(decay.model$data[,1]))
-model.type <- match.arg(decay.model$model.type, c("exponential", "power"))
-y.type <- match.arg(decay.model$y.type, c("similarities", "dissimilarities"))
+dista<-sort(unique(x$data[,1]))
+model.type <- match.arg(x$model.type, c("exponential", "power"))
+y.type <- match.arg(x$y.type, c("similarities", "dissimilarities"))
 
 switch(model.type, exponential = {
 if(!add){
 switch(y.type, similarities = {
-plot(decay.model$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Similarity", col=col, pch=pch, cex=cex, ...)
-lines(dista, decay.model$a.intercept*exp(decay.model$b.slope*dista), col=col, lty=lty, lwd=lwd, ...)
+plot(x$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Similarity", col=col, pch=pch, cex=cex, ...)
+lines(dista, x$a.intercept*exp(x$b.slope*dista), col=col, lty=lty, lwd=lwd, ...)
 }, dissimilarities = {
-plot(decay.model$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Dissimilarity", col=col, pch=pch, cex=cex, ...)
-lines(dista, 1-(1-decay.model$a.intercept)*exp(-decay.model$b.slope*dista), col=col, lty=lty, lwd=lwd, ...)
+plot(x$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Dissimilarity", col=col, pch=pch, cex=cex, ...)
+lines(dista, 1-(1-x$a.intercept)*exp(-x$b.slope*dista), col=col, lty=lty, lwd=lwd, ...)
 })
 }
 if(add){
 switch(y.type, similarities = {
-points(decay.model$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Similarity", col=col, pch=pch, cex=cex, ...)
-lines(dista, decay.model$a.intercept*exp(decay.model$b.slope*dista), col=col, lty=lty, lwd=lwd, ...)
+points(x$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Similarity", col=col, pch=pch, cex=cex, ...)
+lines(dista, x$a.intercept*exp(x$b.slope*dista), col=col, lty=lty, lwd=lwd, ...)
 }, dissimilarities = {
-points(decay.model$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Dissimilarity", col=col, pch=pch, cex=cex, ...)
-lines(dista, 1-(1-decay.model$a.intercept)*exp(-decay.model$b.slope*dista), col=col, lty=lty, lwd=lwd, ...)
+points(x$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Dissimilarity", col=col, pch=pch, cex=cex, ...)
+lines(dista, 1-(1-x$a.intercept)*exp(-x$b.slope*dista), col=col, lty=lty, lwd=lwd, ...)
 })
 }
 }
 , power = {
 if(!add){
 switch(y.type, similarities = {
-plot(decay.model$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Similarity", col=col, pch=pch, cex=cex, ...)
-lines(dista, decay.model$a.intercept*dista^decay.model$b.slope, col=col, lty=lty, lwd=lwd, ...)
+plot(x$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Similarity", col=col, pch=pch, cex=cex, ...)
+lines(dista, x$a.intercept*dista^x$b.slope, col=col, lty=lty, lwd=lwd, ...)
 }, dissimilarities = {
-plot(decay.model$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Dissimilarity", col=col, pch=pch, cex=cex, ...)
-lines(dista, 1-(1-decay.model$a.intercept)*dista^-decay.model$b.slope, col=col, lty=lty, lwd=lwd, ...)
+plot(x$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Dissimilarity", col=col, pch=pch, cex=cex, ...)
+lines(dista, 1-(1-x$a.intercept)*dista^-x$b.slope, col=col, lty=lty, lwd=lwd, ...)
 })
 }
 if(add){
 switch(y.type, similarities = {
-points(decay.model$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Similarity", col=col, pch=pch, cex=cex, ...)
-lines(dista, decay.model$a.intercept*dista^decay.model$b.slope, col=col, lty=lty, lwd=lwd, ...)
+points(x$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Similarity", col=col, pch=pch, cex=cex, ...)
+lines(dista, x$a.intercept*dista^x$b.slope, col=col, lty=lty, lwd=lwd, ...)
 }, dissimilarities = {
-points(decay.model$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Dissimilarity", col=col, pch=pch, cex=cex, ...)
-lines(dista, 1-(1-decay.model$a.intercept)*dista^-decay.model$b.slope, col=col, lty=lty, lwd=lwd, ...)
+points(x$data, xlim=xlim, ylim=ylim, xlab="Distance", ylab="Dissimilarity", col=col, pch=pch, cex=cex, ...)
+lines(dista, 1-(1-x$a.intercept)*dista^-x$b.slope, col=col, lty=lty, lwd=lwd, ...)
 })
 }
 })
