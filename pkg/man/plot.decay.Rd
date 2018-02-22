@@ -12,13 +12,13 @@ or power law function as estimated with decay.model().
 }
 
 \usage{
-\method{plot}{decay}(decay.model, xlim=c(0,max(decay.model$data[,1])), ylim=c(0,1), 
+\method{plot}{decay}(x, xlim=c(0,max(x$data[,1])), ylim=c(0,1), 
 add=FALSE, remove.dots=FALSE, col="black", pch=1, lty=1, lwd=5, cex=1, ...)
 
 }
 
 \arguments{
-\item{decay.model}{ the output of decay.model().}
+\item{x}{ the output of decay.model().}
 \item{xlim}{ the range of spatial distances to be plotted, default is from 0 to the maximum distance in the data.}
 \item{ylim}{ the range of assemblage similarities or dissimilarities to be plotted, default is from 0 to 1.}
 \item{add}{ add to the previous plot.}
