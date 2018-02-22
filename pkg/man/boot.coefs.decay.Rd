@@ -24,9 +24,9 @@ The function returns a list with:
 
 \item{model.type}{  functional form of the model, either negative exponential or power law.}
 \item{y.type}{  similarties or dissimilarities.}
-\item{original.coefs}{  model coefficients as estimated with a GLM using decay.model().}
-\item{boot.coefs}{  a matrix with the coefficients bootstrapped distribution, including intercept
+\item{boot.coefs}{  a matrix with the coefficients bootstrapped distributions, including intercept
  values in the first column, and slope values in the second column.}
+\item{original.coefs}{  model coefficients as estimated with a GLM using decay.model().}
 \item{mean.boot}{  the mean of the bootstrapped distributions.}
 \item{sd.boot}{  the standard deviation of the bootstrapped distributions.}
 }
