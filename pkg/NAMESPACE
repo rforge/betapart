@@ -11,6 +11,4 @@ importFrom(ape, drop.tip, is.rooted, read.tree)
 importFrom(picante, node.age)
 
 ## S3 methods
-S3method(plot, decay.plot)
-S3method(points, decay.plot)
-S3method(lines, decay.plot)
+S3method(decay, plot)
