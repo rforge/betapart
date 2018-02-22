@@ -87,7 +87,7 @@ parameters <- list(data = data.frame(exp(x),1-y), model = log.glm, model.type = 
 	pseudo.r.squared = 1-log.glm$deviance/log.glm$null.deviance, 
 	a.intercept = 1-exp(log.glm$coefficients[1]), b.slope = -log.glm$coefficients[2], 
 	p.value = ifelse(p.value==0,1/perm,p.value))
-class(parameters)<-"decay.model"	
+class(parameters)<-"decay"	
 return(parameters)
 
 })
@@ -105,7 +105,7 @@ return(parameters)
 
 plot.decay<-function(decay.model, xlim=c(0,max(decay.model$data[,1])), ylim=c(0,1), add=FALSE, remove.dots=FALSE, 
 col="black", pch=1, lty=1, lwd=5, cex=1, ...){
-if (!inherits(decay.model, "decay.model")){	
+if (!inherits(decay, "decay.model")){	
 		stop("The input is not a distance-decay model fitted with decay.model().",call.=TRUE)
 	}
 
@@ -167,7 +167,7 @@ lines(dista, 1-(1-decay.model$a.intercept)*dista^-decay.model$b.slope, col=col, 
 ##### It takes a decay model (x) and bootstrap the parameters R times
 
 boot.coefs.decay<-function(x, R){
-if (!inherits(x, "decay.model")){	
+if (!inherits(x, "decay")){	
 		stop("The input is not a distance-decay model fitted with decay.model().",call.=TRUE)
 	}
 ptm <- proc.time()
