@@ -7,7 +7,7 @@ Core calculations of betapart for abundance-based dissimilarity measures
 }
 \description{
 Computes the basic quantities needed for computing the abundance-based multiple-site 
-dissimilarity measuresc and pairwise dissimilarity matrices.
+dissimilarity measures and pairwise dissimilarity matrices.
 }
 \usage{
 betapart.core.abund(x)
@@ -19,7 +19,7 @@ betapart.core.abund(x)
 
 \value{
 The function returns an object of class \code{betapart.abund} with the following elements:
-\item{multiple.shared.abund}{ the multiple-site interesection component in terms of abundances (AM)}
+\item{multiple.shared.abund}{ the multiple-site intersection component in terms of abundances (AM)}
 \item{pair.shared.abund}{ a matrix containing the agreement in abundance between pairs of sites (A)}
 \item{min.not.shared.abund}{ a matrix containing the minimum disagreement in abundance between pairs of sites: min(B,C)}
 \item{max.not.shared.abund}{ a matrix containing the maximum disagreement in abundance between pairs of sites between pairs of sites: max(B,C)}
