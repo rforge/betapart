@@ -24,7 +24,7 @@ parameters <- list(data = data.frame(x,y), model = log.glm, model.type = model.t
 	pseudo.r.squared = 1-log.glm$deviance/log.glm$null.deviance, 
 	a.intercept = exp(log.glm$coefficients[1]), b.slope = log.glm$coefficients[2], 
 	p.value = ifelse(p.value==0,1/perm,p.value))
-class(parameters)<-"decay.model"	
+class(parameters)<-"decay"	
 return(parameters)
 
 }, dissimilarities = {
@@ -43,7 +43,7 @@ parameters <- list(data = data.frame(x,1-y), model = log.glm, model.type = model
 	pseudo.r.squared = 1-log.glm$deviance/log.glm$null.deviance, 
 	a.intercept = 1-exp(log.glm$coefficients[1]), b.slope = -log.glm$coefficients[2], 
 	p.value = ifelse(p.value==0,1/perm,p.value))
-class(parameters)<-"decay.model"	
+class(parameters)<-"decay"	
 return(parameters)
 })
 }
@@ -68,7 +68,7 @@ parameters <- list(data = data.frame(exp(x),y), model = log.glm, model.type = mo
 	pseudo.r.squared = 1-log.glm$deviance/log.glm$null.deviance, 
 	a.intercept = exp(log.glm$coefficients[1]), b.slope = log.glm$coefficients[2], 
 	p.value = ifelse(p.value==0,1/perm,p.value))
-class(parameters)<-"decay.model"	
+class(parameters)<-"decay"	
 return(parameters)
 
 }, dissimilarities = {
@@ -105,7 +105,7 @@ return(parameters)
 
 plot.decay<-function(decay.model, xlim=c(0,max(decay.model$data[,1])), ylim=c(0,1), add=FALSE, remove.dots=FALSE, 
 col="black", pch=1, lty=1, lwd=5, cex=1, ...){
-if (!inherits(decay, "decay.model")){	
+if (!inherits(decay.model, "decay")){	
 		stop("The input is not a distance-decay model fitted with decay.model().",call.=TRUE)
 	}
 
